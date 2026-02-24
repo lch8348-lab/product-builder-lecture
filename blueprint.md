@@ -1,18 +1,25 @@
-
 # Lotto Number Generator
 
 ## Overview
 
-A simple web application to generate and display random lottery numbers.
+A modern and interactive lottery number generator with dark/light mode support, optimized for a premium user experience.
 
 ## Features
 
-*   Generate 6 unique random numbers between 1 and 45.
-*   Display the generated numbers in a visually appealing way.
-*   A button to generate new numbers.
+*   **Lottery Number Generation**: Generate 6 unique random numbers (1-45) with sorting.
+*   **Theme Switching**: Support for dark and light modes with smooth transitions.
+*   **Premium UI**: Visual color coding for number ranges, glassmorphism effects, and polished animations.
+*   **Mobile Responsive**: Fully responsive design for any screen size.
 
 ## Plan
 
-1.  **index.html**: Create the basic structure of the web page with a title, a container for the numbers, and a button.
-2.  **style.css**: Style the page for a clean and modern look.
-3.  **main.js**: Implement the logic for generating and displaying the lottery numbers using a Web Component.
+1.  **Refactor Styles**: Use CSS Variables (`oklch`) to manage themes and range colors.
+2.  **Theme Toggle Component**: Add a dedicated theme switching button (Sun/Moon icons).
+3.  **Enhanced Visualization**:
+    *   1-10: Yellow
+    *   11-20: Blue
+    *   21-30: Red
+    *   31-40: Gray
+    *   41-45: Green
+4.  **Persistent Theme**: Save theme preference in `localStorage`.
+5.  **Deployment**: Push all changes to the `main` branch and enable GitHub Pages.
