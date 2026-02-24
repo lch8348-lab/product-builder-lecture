@@ -39,6 +39,9 @@ body {
   width: 100%;
   max-width: 500px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .theme-toggle {

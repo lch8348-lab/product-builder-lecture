@@ -153,3 +153,102 @@ customElements.define('lotto-generator', LottoGenerator);
 // Bootstrap
 initTheme();
 createThemeToggle();
+
+class PartnershipForm extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = `
+        <style>
+            :host {
+                display: block;
+            }
+            .card {
+                background: var(--card-bg, #fff);
+                backdrop-filter: blur(10px);
+                padding: 2.5rem 2rem;
+                border-radius: 24px;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            h2 {
+                margin: 0 0 1.5rem 0;
+                font-size: 1.5rem;
+                font-weight: 800;
+                text-align: center;
+                color: var(--text-color);
+            }
+            .form-group {
+                margin-bottom: 1.2rem;
+            }
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                font-weight: 600;
+                opacity: 0.8;
+                color: var(--text-color);
+            }
+            input, textarea {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                border-radius: 12px;
+                border: 1px solid oklch(0.5 0 0 / 0.2);
+                background: oklch(1 0 0 / 0.05);
+                color: var(--text-color);
+                font-family: inherit;
+                font-size: 1rem;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+            input:focus, textarea:focus {
+                border-color: var(--accent-color);
+            }
+            textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+            .btn-submit {
+                background: var(--accent-color);
+                color: white;
+                border: none;
+                padding: 1rem;
+                border-radius: 12px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.2s;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            .btn-submit:hover {
+                background: var(--button-hover);
+                transform: translateY(-2px);
+            }
+        </style>
+        <div class="card">
+            <h2>Partnership Inquiry</h2>
+            <form action="https://formspree.io/f/xwvnwgvn" method="POST">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="How can we collaborate?" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+        `;
+    }
+}
+
+customElements.define('partnership-form', PartnershipForm);
