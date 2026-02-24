@@ -1,27 +1,23 @@
-# Lotto Number Generator
+# Lotto & Animal Face AI Studio
 
 ## Overview
 
-A modern and interactive lottery number generator with dark/light mode support, optimized for a premium user experience.
+A multi-functional interactive web studio featuring a premium Lottery Generator and an AI-powered Animal Face Test.
 
 ## Features
 
-*   **Lottery Number Generation**: Generate 6 unique random numbers (1-45) with sorting.
-*   **Theme Switching**: Support for dark and light modes with smooth transitions.
-*   **Premium UI**: Visual color coding for number ranges, glassmorphism effects, and polished animations.
-*   **Partnership Form**: A contact form integrated with Formspree for business inquiries.
-*   **Mobile Responsive**: Fully responsive design for any screen size.
+*   **Lottery Number Generation**: Modern UI with range-based colors and animations.
+*   **Animal Face AI Test**: Real-time AI classification (Dog vs Cat) using Teachable Machine.
+*   **Theme Switching**: Dark and light mode support across all components.
+*   **Partnership Form**: Formspree-integrated business inquiry system.
+*   **Premium UI/UX**: Glassmorphism, smooth transitions, and responsive design.
 
 ## Plan
 
-1.  **Refactor Styles**: Use CSS Variables (`oklch`) to manage themes and range colors.
-2.  **Theme Toggle Component**: Add a dedicated theme switching button (Sun/Moon icons).
-3.  **Enhanced Visualization**:
-    *   1-10: Yellow
-    *   11-20: Blue
-    *   21-30: Red
-    *   31-40: Gray
-    *   41-45: Green
-4.  **Partnership Inquiry Form**: Create a new Web Component for the contact form using Formspree.
-5.  **Persistent Theme**: Save theme preference in `localStorage`.
-6.  **Deployment**: Push all changes to the `main` branch and enable GitHub Pages.
+1.  **Refactor Layout**: Organize the page into multiple interactive "Cards" or sections.
+2.  **Animal Face Test Component**: 
+    *   Load TensorFlow.js and Teachable Machine libraries.
+    *   Implement webcam access and real-time prediction.
+    *   Display results with animated progress bars (Dog vs Cat probability).
+3.  **UI/UX Polishing**: Ensure high-quality aesthetics for the AI test section.
+4.  **Deployment**: Update GitHub repository and refresh the live site.
